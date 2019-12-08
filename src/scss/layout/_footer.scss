@@ -1,0 +1,99 @@
+/* -----------------------
+:: Footer
+----------------------- */
+.ino-footer {
+  background-color: $beige-whitest;
+
+  >.container {
+    padding: rem(32) rem(32) 0 rem(32);
+  }
+
+  &__title {
+    font-family: $playfair;
+    font-size: rem(20);
+    @include uppercase-spacing;
+  }
+
+  &__subtitle {
+    &--small {
+      font-size: rem(10);
+      @include uppercase-spacing;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    margin-bottom: rem(48);
+  }
+
+  &__link {
+    color: $black;
+    font-family: $muli;
+    @include uppercase-spacing;
+    font-size: rem(12);
+
+    &:hover {
+      color: $golden;
+    }
+  }
+
+  &__legal {
+    border-top: 1px solid $gray-outline;
+    padding-top: rem(32);
+    padding-bottom: rem(32);
+
+    &--text {
+      font-size: rem(10);
+      @include letter-spacing;
+      margin-bottom: 0;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+  }
+
+  &__icons {
+    color: $black;
+
+    &:hover {
+      color: $golden;
+    }
+  }
+
+  &__socials-section {
+    margin-top: rem(32);
+    margin-bottom: rem(32);
+  }
+
+  &__subscribe-form {
+    display: flex;
+
+    &-input {
+      border-radius: 0;
+      padding: rem(12);
+      font-size: rem(14);
+      height: rem(47);
+      width: 100%;
+
+      &:focus {
+        outline-color: $golden;
+      }
+    }
+
+    &-button {
+      border-radius: 0;
+      padding: rem(12) rem(24);
+      @include uppercase-spacing;
+      font-size: rem(14);
+    }
+
+  }
+}

@@ -1,0 +1,241 @@
+/* -----------------------
+:: Desktop Header
+----------------------- */
+.ino-header-desktop {
+  display: none;
+  overflow: visible;
+  letter-spacing: 0.1em;
+  background-color: $white;
+
+  .logo-desktop {
+    margin-bottom: 0;
+    text-align: center;
+    margin-top: rem(25);
+    margin-bottom: rem(25);
+  }
+
+  .desktop-nav {
+    display: flex;
+    margin: 0;
+    position: relative;
+    list-style: none;
+    justify-content: center;
+    width: 100%;
+    overflow: visible;
+
+    &:hover {
+      &>.desktop-nav__item {
+        &:not(:hover) {
+          // opacity: 0.2;
+        }
+      }
+    }
+
+    &>.desktop-nav__item {
+      border-bottom: 1px solid transparent;
+      transition: all 250ms ease;
+
+      &:hover {
+        border-bottom-color: $golden;
+      }
+    }
+
+    &__item {
+      text-transform: uppercase;
+      font-size: rem(14);
+      margin-bottom: 0;
+
+      .desktop-nav__link {
+        color: $black;
+        text-decoration: none;
+        line-height: 2;
+      }
+
+      &:not(:last-child) {
+        margin-right: rem(40);
+      }
+
+      &:hover {
+        .desktop-nav__link {
+          color: $golden;
+        }
+
+        .desktop-nav-sublist-container {
+          // display: block;
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+
+    &-sublist-container {
+      border-top: 1px solid $gray-outline;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: $white;
+      width: 100%;
+      transform: translateY(100%);
+      z-index: 1;
+      // display: none;
+      opacity: 0;
+      transition: all 250ms ease;
+      visibility: hidden;
+      margin-top: 0;
+      margin-left: 0;
+      height: rem(250);
+      box-shadow: 0 1px 3px rgba($black, 0.1);
+    }
+
+    &__sublist {
+      margin-left: 0;
+      list-style: none;
+
+      .desktop-nav__item {
+        font-size: rem(12);
+        letter-spacing: 0.1em;
+        line-height: 2.5;
+      }
+    }
+
+    &__has-sublist {
+      &:hover {
+        // background-color: red;
+        position: relative;
+        // border-bottom: 1px solid $golden;
+
+        .desktop-nav__link {
+          color: $golden;
+        }
+
+      }
+    }
+  }
+
+  .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+//-- Nav store options
+.nav-store-options {
+  position: absolute;
+  right: 0;
+  top: 0;
+  // border: 1px dashed magenta;
+
+  &__user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .icon-user-svg {}
+
+    a {
+      font-size: rem(12);
+      text-transform: uppercase;
+      color: $black;
+      text-decoration: none;
+      margin-right: rem(12);
+      margin-left: rem(8);
+    }
+  }
+
+
+  &__shopping-bag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__search {
+    button#close_modal_search {
+      position: fixed;
+      top: 5vh;
+      right: 5vh;
+      z-index: 2;
+      visibility: hidden;
+      transform: all 500ms ease;
+    }
+
+    &.backdrop-open {
+      button#close_modal_search {
+        visibility: visible;
+      }
+    }
+
+    &>form.input-group.search-bar {
+      >.input-group-btn {
+        position: relative;
+
+        >button.icon-fallback-text {
+          padding: 0;
+        }
+      }
+
+      &.backdrop-search {
+        &::after {
+          content: "";
+          top: 0;
+          left: 0;
+          background: rgba($white, 0.95);
+          width: 100%;
+          height: 100%;
+          display: block;
+          position: fixed;
+          z-index: 1;
+        }
+
+        &>input {
+          position: fixed;
+          left: 50%;
+          top: 50%;
+          width: 320px;
+          transform: translate(-50%, -50%);
+          padding: 5px 12px;
+          font-size: 1.8rem;
+          font-weight: 100;
+          height: 4.2rem;
+          z-index: 2;
+          caret-color: $golden;
+          outline-color: $golden;
+          background: transparent;
+          border-bottom: 1px solid $golden;
+          visibility: visible;
+          transition: all 500ms ease;
+
+          &::selection {
+            background-color: rgba($golden, 0.3);
+          }
+        }
+      }
+    }
+
+    input[type=search] {
+      width: 0;
+      padding: 0;
+      visibility: hidden;
+    }
+  }
+
+  .grid-container {
+    margin: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+
+    >li {
+      padding: 0 rem(12);
+      margin-bottom: 0;
+    }
+
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .ino-header-desktop {
+    display: block;
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "name": "issue-number-one",
+  "version": "1.0.0",
+  "description": "Issue number one project",
+  "main": "gulpfile.js",
+  "scripts": {
+    "serve": "gulp serve",
+    "build": "webpack-dev-server",
+    "build:prod": "webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edubasabe/issue-number-one.git"
+  },
+  "keywords": [
+    "store",
+    "shopping"
+  ],
+  "author": "David Basabe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edubasabe/issue-number-one/issues"
+  },
+  "homepage": "https://github.com/edubasabe/issue-number-one#readme",
+  "devDependencies": {
+    "@vue/component-compiler-utils": "^3.0.2",
+    "browser-sync": "^2.26.7",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-notify": "^3.2.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "vue": "^2.6.10",
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "browserslist": [
+    "last 1 versions",
+    "> 1%",
+    "maintained node versions",
+    "not dead"
+  ],
+  "dependencies": {
+    "vue-hot-reload-api": "^2.3.4"
+  }
+}

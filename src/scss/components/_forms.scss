@@ -1,0 +1,25 @@
+/* -----------------------
+:: Forms
+----------------------- */
+.search-bar {
+  display: flex;
+  position: relative;
+
+  input[type=search] {
+    flex: 1;
+    font-size: rem(14);
+    font-style: normal;
+    letter-spacing: 0.05em;
+    font-weight: 400;
+  }
+  > .input-group-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: rem(45);
+    height: rem(45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <title>Static Page - Issue Number One</title>
+
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body class="ino-body">
+  <header class="ino-header">
+    <div class="ino-header__wrapper">
+      <div class="ino-header__menu-icon"></div>
+      <img src="./images/main-logo--mobile.svg" alt="Logo" class="ino-header__logo">
+      <div class="ino-header__shopping-bag">32</div>
+    </div>
+  </header>
+
+  <section class="ino-partners">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2 class="heading heading--title heading--uppercase heading--playfair">Our brands</h2>
+          <p class="heading heading--lead">We work with exclusive partners</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="brands-list swiper-container">
+          <ul class="list-unstyled swiper-wrapper">
+            <li class="swiper-slide"></li>
+          </ul>
+        </div> 
+      </div>
+    </div>
+  </section>
+
+  <section class="ino-instagram" id="instaApp">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2 class="heading heading--title heading--uppercase heading--playfair">Instagram</h2>
+          <p class="heading heading--lead">Inactivo commodo culpa nisi veniam eiusmod nostrud sint in.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <!-- Slider main container -->
+          <div class="swiper-container" id="swiper-instagram">
+              <div class="swiper-wrapper">
+                  <div class="swiper-slide">Slide 1</div>
+                  <div class="swiper-slide">Slide 2</div>
+                  <div class="swiper-slide">Slide 3</div>
+                  <div class="swiper-slide">Slide 4</div>
+                  <div class="swiper-slide">Slide 5</div>
+                  <div class="swiper-slide">Slide 6</div>
+                  <div class="swiper-slide">Slide 7</div>
+                  <div class="swiper-slide">Slide 8</div>
+                  <div class="swiper-slide">Slide 9</div>
+                  <div class="swiper-slide">Slide 10</div>
+                  <div v-for="(post, index) in posts" :key="index" class="col-12 col-lg-auto swiper-slide">
+                      <a :href="post.link" :style="{backgroundImage: `url( ${post.images.standard_resolution.url} )` }"></a>
+                  </div>
+              </div>
+          </div>
+          <ul class="list-unstyled instagram-list">
+            <li v-for="(post, index) in posts" :key="index" class="col-12 col-lg-auto">
+              <a :href="post.link" :style="{backgroundImage: `url( ${post.images.standard_resolution.url} )` }"></a>
+            </li>
+          </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <br>
+  <footer class="ino-footer">
+    <section class="container">
+      <div class="row">
+        <div class="col-12 col-sm-4">
+          <h4 class="ino-footer__title">My Account</h4>
+          <ul class="ino-footer__list">
+            <li><a href="#" class="ino-footer__link">Order history</a></li>
+            <li><a href="#" class="ino-footer__link">My wishlist</a></li>
+            <li><a href="#" class="ino-footer__link">Log Out</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-sm-4">
+          <h4 class="ino-footer__title">Customer Care</h4>
+          <ul class="ino-footer__list">
+            <li><a href="#" class="ino-footer__link">Contact us</a></li>
+            <li><a href="#" class="ino-footer__link">Refunds</a></li>
+            <li><a href="#" class="ino-footer__link">Shipping & Delivery</a></li>
+            <li><a href="#" class="ino-footer__link">Cookie Policy</a></li>
+            <li><a href="#" class="ino-footer__link">About Us</a></li>
+            <li><a href="#" class="ino-footer__link">Help</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-sm-4">
+          <h4 class="ino-footer__title">Membership</h4>
+          <ul class="ino-footer__list">
+            <li><a href="#" class="ino-footer__link">Contact us</a></li>
+            <li><a href="#" class="ino-footer__link">Refunds</a></li>
+            <li><a href="#" class="ino-footer__link">Shipping & Delivery</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-6 text-center">
+          <h4 class="ino-footer__title">Stay in touch</h4>
+          <p class="ino-footer__subtitle--small">GET EXCLUSIVE OFFERS & NEWS</p>
+
+          <form action="" class="ino-footer__subscribe-form">
+            <input type="text" name="subscribe" id="subscribe" class=" ino-footer__subscribe-form-input"
+              placeholder="Sign up to our mailing list">
+            <button type="submit" class="btn btn-dark ino-footer__subscribe-form-button">Subscribe</button>
+          </form>
+
+          <div class="row ino-footer__socials-section">
+            <div class="col-5 col-md-3">
+              <p class="ino-footer__subtitle--small">Find us on:</p>
+            </div>
+            <div class="col-7 col-md-5">
+              <ul class="ino-footer__socials">
+                <li>
+                  <a href="#" class="ino-footer__icons">
+                    <i class="fab fa-lg fa-instagram"></i>
+                    <span class="sr-only">Instagram</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="ino-footer__icons">
+                    <i class="fab fa-lg fa-facebook-f"></i>
+                    <span class="sr-only">Facebook</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="ino-footer__icons">
+                    <i class="fab fa-lg fa-twitter"></i>
+                    <span class="sr-only">Twitter</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="ino-footer__icons">
+                    <i class="fab fa-lg fa-pinterest"></i>
+                    <span class="sr-only">Pinterest</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contaner-fluid ino-footer__legal">
+      <div class="row-fluid">
+        <div class="col-12 text-center">
+          <address class="ino-footer__legal--text">© Copyright 2019. ISSUE NUMBER ONE. All rights reserved.</address>
+        </div>
+      </div>
+    </section>
+  </footer>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+  <script src="./js/swiper-init.js"></script>
+  <script src="./js/index.js"></script>
+</body>
+
+</html>

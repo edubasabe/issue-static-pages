@@ -1,0 +1,23 @@
+/* -----------------------
+:: Instagram
+----------------------- */
+.ino-instagram {
+  .swiper-slide {
+    width: rem(172);
+    height: rem(172);
+    border: 1px solid $beige-whitest;
+  }
+}
+.instagram-list {
+  display: flex;
+  > li {
+    width: 172px;
+    height: 172px;
+    display: block;
+  }
+  a {
+    width: 172px;
+    height: 172px;
+    display: block;
+  }
+}

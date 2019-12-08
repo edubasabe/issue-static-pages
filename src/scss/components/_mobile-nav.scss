@@ -1,0 +1,144 @@
+/* -----------------------
+:: Header Mobile
+----------------------- */
+#NavDrawer {
+  // background-color: $gray-outline;
+  background-color: $white;
+  border-right: 1px solid $gray-outline;
+
+  .drawer {
+    &__header {
+      border-bottom: 0;
+
+      .search-bar {
+        input[type=search] {
+          font-size: rem(12);
+          background-color: $whitegray;
+          font-style: normal;
+          
+          &::placeholder {
+            color: $text-placeholder;
+          }
+        }
+      }
+    }
+    &__close {
+      color: $black;
+    }
+  }
+  .mobile-nav {
+    &__item {
+      text-transform: uppercase;
+      background: transparent;
+      
+      a {
+        color: $black;
+        font-size: rem(14);
+        font-weight: 300;
+        letter-spacing: 0.1em;
+
+        &:active {
+          background-color: transparent;
+        }
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &__sublist {
+      // background: blue;
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-top: 1px solid $gray-outline;
+        height: 1px;
+        width: 100%;
+      }
+      .mobile-nav {
+        &__item {
+          a {
+            font-size: rem(12);
+          }
+        }
+      }
+    }
+
+    &__has-sublist {
+      display: flex;
+
+      > .mobile-nav__link {
+        flex: 6;
+      }
+
+      > .mobile-nav__toggle {
+        flex: 1;
+      }
+    }
+
+    &__toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      button {
+        color: $black;
+        // border: 1px dashed magenta;
+        padding: rem(5px);
+        height: 100%;
+        width: 100%;
+
+        > .icon-plus-minus {
+          display: block;
+          margin: 0 auto;
+        }
+
+        &:active {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}
+
+//-- Show / Hide Toggle Menu
+body {
+  &.js-drawer-open {
+    svg {
+      &.icon-menu-svg {
+        display: none;
+
+        + .icon-close-svg {
+          display: block;
+          
+        }
+      }
+    }
+  }
+
+  svg {
+    &.icon-menu-svg {
+      display: block;
+      cursor: pointer;
+
+      + .icon-close-svg {
+        display: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+
+span.icon-bag__items {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  font-size: 10px;
+  letter-spacing: 0;
+  transform: translateX(-50%);
+}

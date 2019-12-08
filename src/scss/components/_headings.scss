@@ -1,0 +1,27 @@
+.heading {
+  &--title {
+    font-size: rem(40);
+    letter-spacing: 0.2em;
+  } 
+  &--uppercase {
+    text-transform: uppercase;
+  }
+
+  &--spacing {
+    letter-spacing: 0.2em;
+  }
+
+  &--playfair {
+    font-family: $playfair;
+  }
+
+  &--font-weight-300 {
+    font-weight: 300;
+  }
+
+  &--lead {
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+}

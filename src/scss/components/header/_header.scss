@@ -1,0 +1,25 @@
+/* -----------------------
+:: Header
+----------------------- */
+@import '_mobile.scss';
+@import '_desktop.scss';
+
+
+/* -----------------------
+:: Promotion Alert
+----------------------- */
+.promotion-alert {
+  background: $black;
+  p {
+    color: $white;
+    font-size: rem(12);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 0;
+    padding: rem(9) 0;
+
+    &:empty {
+      display: none;
+    }
+  }
+}

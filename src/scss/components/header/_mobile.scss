@@ -1,0 +1,56 @@
+/* -----------------------
+:: Mobile Header
+----------------------- */
+.ino-header-mobile {
+  padding-top: 0 !important;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    height: rem(60);
+    border-bottom: 1px solid $gray-outline;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: $white;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  &__logo {
+    justify-self: center;
+    align-self: center;
+    font-size: 0;
+  }
+
+  &__menu-icon {
+    width: rem(32);
+    height: rem(32);
+    @include backgroundIconCenter('../images/icon-menu.svg');
+    align-self: center;
+    justify-self: center;
+
+    .site-nav {
+      &--mobile {
+        margin-left: 0;
+      }
+      
+      &__link {
+        padding: 0;
+      }
+    } 
+  }
+
+  &__shopping-bag {
+    padding: 0;
+    align-self: center;
+    justify-self: center;
+  }
+}
+
+@include media-breakpoint-up(lg) { 
+  .ino-header-mobile {
+    display: none;
+  }
+}

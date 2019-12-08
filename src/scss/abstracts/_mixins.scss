@@ -1,0 +1,69 @@
+/* -----------------------
+:: Mixins
+----------------------- */
+@mixin backgroundIconCenter($backgroundUrl) {
+  background: url($backgroundUrl) no-repeat center;
+}
+
+
+@mixin uppercase-spacing {
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+@mixin letter-spacing {
+  letter-spacing: 0.2em;
+}
+
+$grid-breakpoints: (xs: 0,
+  sm: 480px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1200px);
+
+@mixin media-breakpoint-up($size) {
+  @if ($size==sm) {
+    @media (min-width: map-get($grid-breakpoints, sm)) {
+      @content;
+    }
+  }
+
+  @else if ($size==md) {
+    @media (min-width: map-get($grid-breakpoints, md)) {
+      @content;
+    }
+  }
+
+  @else if ($size==lg) {
+    @media (min-width: map-get($grid-breakpoints, md)) {
+      @content;
+    }
+  }
+
+  @else {
+    @media (min-width: map-get($grid-breakpoints, xl)) {
+      @content;
+    }
+  }
+}
+
+
+// .color {
+//   color: orange;
+
+//   @include media-breakpoint-up(sm) {
+//     color: red;
+//   }      
+
+//   @include media-breakpoint-up(md) {
+//     color: red;
+//   }    
+
+//   @include media-breakpoint-up(lg) {
+//     color: blue;
+//   }  
+
+//   @include media-breakpoint-up(xl) {
+//     color: magenta;
+//   }  
+// }

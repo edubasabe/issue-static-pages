@@ -1,0 +1,25 @@
+/* -----------------------
+:: Functions
+----------------------- */
+// ---- Rem Calculation
+$baseFontSize: 16px;
+@function rem($pixels, $context: $baseFontSize) {
+    @if (unitless($pixels)) {
+        $pixels: $pixels * 1px;
+    }
+
+    @if (unitless($context)) {
+        $context: $context * 1px;
+    }
+
+    @return round(($pixels / $context * 1rem) * 100) / 100;
+}
+
+//-- Sum
+@function sum($numbers...) {
+    $sum: 0;
+    @each $number in $numbers {
+        $sum: $sum + $number;
+    }
+    @return $sum;
+}

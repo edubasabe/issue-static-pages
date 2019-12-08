@@ -1,0 +1,28 @@
+/* -----------------------
+:: Shopping Cart
+----------------------- */
+
+#CartDrawer {
+  background-color: $white;
+  border-left: 1px solid $gray-outline;
+  
+  * {
+    color: $black;
+  }
+  .drawer {
+    &__title {
+      color: $black;
+      font-family: $playfair;
+    }
+
+    &__header {
+      border-color: $beige-whitest;
+    }
+
+    &__inner {
+      p {
+        color: $black;
+      }
+    }
+  }
+}
