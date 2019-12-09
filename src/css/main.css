@@ -51,6 +51,21 @@ h4,
 }
 
 /* -----------------------
+:: Hero Slider
+----------------------- */
+.ino-hero-slider {
+  background: #ccc;
+}
+
+.ino-hero-slider .swiper-container {
+  height: 29.69rem;
+}
+
+.ino-hero-slider .swiper-container .swiper-slide {
+  background-size: cover;
+}
+
+/* -----------------------
 :: Swiper
 ----------------------- */
 .swiper-container {

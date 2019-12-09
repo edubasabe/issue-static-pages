@@ -1,0 +1,13 @@
+/* -----------------------
+:: Hero Slider
+----------------------- */
+.ino-hero-slider {
+  background: #ccc;
+  .swiper-container {
+    height: rem(475);
+
+    .swiper-slide {
+      background-size: cover;
+    }
+  }
+}

@@ -25,6 +25,70 @@
     </div>
   </header>
 
+  <section class="ino-hero-slider">
+    <div class="swiper-container" id="ino-hero-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide-1" style="background-image: url(https://cdn.shopify.com/s/files/1/1059/4068/t/4/assets/hero-slide-1.jpg?1602);">
+              <div class="container">
+                <div class="row">
+                  <div class="col-12 col-md-6 text-left">
+                    <div class="h3">Aliquip reprehenderit ex culpa reprehenderit ad consequat magna</div>
+                    <p>Duis ex voluptate sit elit velit sit labore excepteur esse officia proident pariatur. Ea est nostrud qui aute sunt laborum excepteur reprehenderit qui non proident id.</p>
+
+                    <a href="#" class="btn btn-primary btn-lg">Shop Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide slide-2" style="background-image: url(https://cdn.shopify.com/s/files/1/1059/4068/t/4/assets/hero-slide-2.jpg?1605);">
+              <div class="container">
+                <div class="row">
+                  <div class="col-12 col-md-6 text-left">
+                    <div class="h3">Aliquip reprehenderit ex culpa reprehenderit ad consequat magna</div>
+                    <p>Duis ex voluptate sit elit velit sit labore excepteur esse officia proident pariatur. Ea est nostrud qui aute sunt laborum excepteur reprehenderit qui non proident id.</p>
+
+                    <a href="#" class="btn btn-primary btn-lg">Shop Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+  </section> 
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+  initSwiper();
+});
+
+function initSwiper() {
+  const swiper = new Swiper ('#ino-hero-slider', {
+    slidesPerView: 1,
+    direction: 'horizontal',
+    loop: true,
+    effect: 'fade',
+    autoplay: {
+      delay: 3000
+    },
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+  });
+  console.log('done');
+}
+
+  </script>
+
   <section class="ino-partners">
     <div class="container">
       <div class="row">
@@ -178,8 +242,6 @@
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-  <script src="./js/swiper-init.js"></script>
-  <script src="./js/index.js"></script>
 </body>
 
 </html>
