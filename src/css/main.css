@@ -116,6 +116,22 @@ h4,
 }
 
 /* -----------------------
+:: Password 
+----------------------- */
+.ino-password__title {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-family: "Playfair Display", "Times New Roman", Times, serif;
+}
+
+/* :: Responsive */
+@media (min-width: 768px) {
+  .ino-password__title {
+    font-size: 3.75rem;
+  }
+}
+
+/* -----------------------
 :: Footer
 ----------------------- */
 .ino-footer {
