@@ -17,76 +17,95 @@
 </head>
 
 <body class="ino-body">
-  <header class="ino-header">
-    <div class="ino-header__wrapper">
-      <div class="ino-header__menu-icon"></div>
-      <img src="./images/main-logo--mobile.svg" alt="Logo" class="ino-header__logo">
-      <div class="ino-header__shopping-bag">32</div>
+  <section class="promotion-alert">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="text-center">
+            <p>50% OFF Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <header class="ino-header-desktop">
+    <div class="container">
+      <div class="row position-relative">
+        <div class="col-12 d-flex justify-content-center">
+          <div class="logo-desktop">
+            <img src="./images/logo-svg.svg" alt="Logo">
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
   <section class="ino-hero-slider">
     <div class="swiper-container" id="ino-hero-slider">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide slide-1" style="background-image: url(https://cdn.shopify.com/s/files/1/1059/4068/t/4/assets/hero-slide-1.jpg?1602);">
-              <div class="container">
-                <div class="row">
-                  <div class="col-12 col-md-6 text-left">
-                    <div class="h3">Aliquip reprehenderit ex culpa reprehenderit ad consequat magna</div>
-                    <p>Duis ex voluptate sit elit velit sit labore excepteur esse officia proident pariatur. Ea est nostrud qui aute sunt laborum excepteur reprehenderit qui non proident id.</p>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide slide-1"
+          style="background-image: url(https://cdn.shopify.com/s/files/1/1059/4068/t/4/assets/hero-slide-1.jpg?1602);">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-6 text-left">
+                <div class="h3">Aliquip reprehenderit ex culpa reprehenderit ad consequat magna</div>
+                <p>Duis ex voluptate sit elit velit sit labore excepteur esse officia proident pariatur. Ea est nostrud
+                  qui aute sunt laborum excepteur reprehenderit qui non proident id.</p>
 
-                    <a href="#" class="btn btn-primary btn-lg">Shop Now</a>
-                  </div>
-                </div>
+                <a href="#" class="btn btn-primary btn-lg">Shop Now</a>
               </div>
             </div>
-            <div class="swiper-slide slide-2" style="background-image: url(https://cdn.shopify.com/s/files/1/1059/4068/t/4/assets/hero-slide-2.jpg?1605);">
-              <div class="container">
-                <div class="row">
-                  <div class="col-12 col-md-6 text-left">
-                    <div class="h3">Aliquip reprehenderit ex culpa reprehenderit ad consequat magna</div>
-                    <p>Duis ex voluptate sit elit velit sit labore excepteur esse officia proident pariatur. Ea est nostrud qui aute sunt laborum excepteur reprehenderit qui non proident id.</p>
-
-                    <a href="#" class="btn btn-primary btn-lg">Shop Now</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+          </div>
         </div>
+        <div class="swiper-slide slide-2"
+          style="background-image: url(https://cdn.shopify.com/s/files/1/1059/4068/t/4/assets/hero-slide-2.jpg?1605);">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-6 text-left">
+                <div class="h3">Aliquip reprehenderit ex culpa reprehenderit ad consequat magna</div>
+                <p>Duis ex voluptate sit elit velit sit labore excepteur esse officia proident pariatur. Ea est nostrud
+                  qui aute sunt laborum excepteur reprehenderit qui non proident id.</p>
 
-        <!-- Add Arrows -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+                <a href="#" class="btn btn-primary btn-lg">Shop Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
+      <!-- Add Arrows -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
     </div>
-  </section> 
+  </section>
   <script>
-  document.addEventListener('DOMContentLoaded', function () {
-  initSwiper();
-});
+    document.addEventListener('DOMContentLoaded', function () {
+      initSwiperHero();
+    });
 
-function initSwiper() {
-  const swiper = new Swiper ('#ino-hero-slider', {
-    slidesPerView: 1,
-    direction: 'horizontal',
-    loop: true,
-    effect: 'fade',
-    autoplay: {
-      delay: 3000
-    },
-    pagination: {
-      el: '.swiper-pagination',
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+    function initSwiperHero() {
+      const swiperHero = new Swiper('#ino-hero-slider', {
+        slidesPerView: 1,
+        direction: 'horizontal',
+        loop: true,
+        effect: 'fade',
+        autoplay: {
+          delay: 3000
+        },
+        pagination: {
+          el: '.swiper-pagination',
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }
+      });
+      console.log('done #ino-hero-slider');
     }
-  });
-  console.log('done');
-}
-
   </script>
 
   <section class="ino-partners">
@@ -102,7 +121,7 @@ function initSwiper() {
           <ul class="list-unstyled swiper-wrapper">
             <li class="swiper-slide"></li>
           </ul>
-        </div> 
+        </div>
       </div>
     </div>
   </section>
@@ -119,34 +138,26 @@ function initSwiper() {
         <div class="col-12">
           <!-- Slider main container -->
           <div class="swiper-container" id="swiper-instagram">
-              <div class="swiper-wrapper">
-                  <div class="swiper-slide">Slide 1</div>
-                  <div class="swiper-slide">Slide 2</div>
-                  <div class="swiper-slide">Slide 3</div>
-                  <div class="swiper-slide">Slide 4</div>
-                  <div class="swiper-slide">Slide 5</div>
-                  <div class="swiper-slide">Slide 6</div>
-                  <div class="swiper-slide">Slide 7</div>
-                  <div class="swiper-slide">Slide 8</div>
-                  <div class="swiper-slide">Slide 9</div>
-                  <div class="swiper-slide">Slide 10</div>
-                  <div v-for="(post, index) in posts" :key="index" class="col-12 col-lg-auto swiper-slide">
-                      <a :href="post.link" :style="{backgroundImage: `url( ${post.images.standard_resolution.url} )` }"></a>
-                  </div>
-              </div>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" style="background-image: url('../src/images/instagram-example.jpg');"></div>
+              <div class="swiper-slide" style="background-image: url('../src/images/instagram-example.jpg');"></div>
+              <div class="swiper-slide" style="background-image: url('../src/images/instagram-example.jpg');"></div>
+              <div class="swiper-slide" style="background-image: url('../src/images/instagram-example.jpg');"></div>
+              <div class="swiper-slide" style="background-image: url('../src/images/instagram-example.jpg');"></div>
+              <div class="swiper-slide" style="background-image: url('../src/images/instagram-example.jpg');"></div>
+              <div class="swiper-slide" style="background-image: url('../src/images/instagram-example.jpg');"></div>
+              <div class="swiper-slide" style="background-image: url('../src/images/instagram-example.jpg');"></div>
+              <div class="swiper-slide" style="background-image: url('../src/images/instagram-example.jpg');"></div>
+              <div class="swiper-slide" style="background-image: url('../src/images/instagram-example.jpg');"></div>
+            </div>
           </div>
-          <ul class="list-unstyled instagram-list">
-            <li v-for="(post, index) in posts" :key="index" class="col-12 col-lg-auto">
-              <a :href="post.link" :style="{backgroundImage: `url( ${post.images.standard_resolution.url} )` }"></a>
-            </li>
-          </ul>
-          </ul>
         </div>
       </div>
     </div>
   </section>
 
   <br>
+
   <footer class="ino-footer">
     <section class="container">
       <div class="row">
@@ -242,6 +253,7 @@ function initSwiper() {
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+  <script src="./js/swiper-instagram.js"></script>
 </body>
 
 </html>

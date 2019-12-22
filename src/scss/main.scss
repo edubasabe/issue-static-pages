@@ -4,9 +4,13 @@
 
 @import './base/base';
 
+@import './components/header/header';
 @import './components/headings';
 @import './components/hero-slider';
 @import './components/swiper';
+@import './pages/application-form';
+
+
 @import './layout/instagram';
 @import './layout/password';
 @import './layout/footer'
