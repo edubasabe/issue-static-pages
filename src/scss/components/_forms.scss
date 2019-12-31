@@ -12,7 +12,8 @@
     letter-spacing: 0.05em;
     font-weight: 400;
   }
-  > .input-group-btn {
+
+  >.input-group-btn {
     position: absolute;
     right: 0;
     top: 0;
@@ -21,5 +22,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+}
+
+.form-control {
+  height: rem(48);
+  border-radius: 0;
+  background-color: $beige-whitest;
+  border-color: $beige-whitest;
+  font-size: rem(14);
+
+  &:focus {
+    border-color: $golden;
+    background-color: $beige-whitest;
+    box-shadow: 0 0 0 0.2rem rgba($golden, .25);
   }
 }

@@ -1,3 +1,7 @@
+.color-golden {
+  color: #B4A27E;
+}
+
 /* -----------------------
 :: Base
 ----------------------- */
@@ -409,8 +413,198 @@ h4,
 }
 
 /* -----------------------
+:: Forms
+----------------------- */
+.search-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.search-bar input[type=search] {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 0.88rem;
+  font-style: normal;
+  letter-spacing: 0.05em;
+  font-weight: 400;
+}
+
+.search-bar > .input-group-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 2.81rem;
+  height: 2.81rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.form-control {
+  height: 3rem;
+  border-radius: 0;
+  background-color: #f5f5f5;
+  border-color: #f5f5f5;
+  font-size: 0.88rem;
+}
+
+.form-control:focus {
+  border-color: #B4A27E;
+  background-color: #f5f5f5;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(180, 162, 126, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(180, 162, 126, 0.25);
+}
+
+/* -----------------------
+:: Buttons
+----------------------- */
+.btn {
+  height: 3rem;
+}
+
+.btn-dark {
+  border-radius: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* -----------------------
 :: Application Form
 ----------------------- */
+.application-form--bg {
+  background: url("../images/bg-application-form.jpg") no-repeat center;
+}
+
+.application-form__title {
+  font-size: 1.13rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.application-form__form-section-title {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.application-form .form-container {
+  background-color: #fff;
+}
+
+.application-form input:not([type=checkbox]),
+.application-form select,
+.application-form option {
+  border-radius: 0;
+  background-color: #f5f5f5;
+  font-size: 0.88rem;
+  height: 3rem;
+  border-color: #f5f5f5;
+}
+
+.application-form input:not([type=checkbox]):focus,
+.application-form select:focus,
+.application-form option:focus {
+  background-color: #f5f5f5;
+}
+
+.application-form .input-group > .input-group-prepend > .input-group-text {
+  border-radius: 0;
+  background-color: #f5f5f5;
+  border-color: #f5f5f5;
+}
+
+/* -----------------------
+:: Login
+----------------------- */
+.login-page__title {
+  color: #fff;
+  font-family: "Playfair Display", "Times New Roman", Times, serif;
+}
+
+.login-page--bg {
+  background-image: url("../images/bg-fashion-show.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 70%;
+}
+
+.login-page__form-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-page__form {
+  background-color: #fff;
+  width: 100%;
+  height: 26.88rem;
+}
+
+.login-page .container-fluid .row {
+  height: 100%;
+  min-height: 100vh;
+}
+
+.login-form__logo {
+  max-height: 2.19rem;
+}
+
+.login-form__title {
+  font-family: "Playfair Display", "Times New Roman", Times, serif;
+}
+
+.login-form__member-link {
+  font-size: 0.75rem;
+}
+
+.login-form__forgot-password {
+  color: #B4A27E;
+  font-size: 0.88rem;
+}
+
+@media (min-width: 768px) {
+  .login-form {
+    max-width: 26.25rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .login-page__form-section {
+    background-color: #fff;
+  }
+  .login-page--bg {
+    background-position: -50rem 0;
+    background-size: contain;
+  }
+  .login-form__logo {
+    max-height: 2.63rem;
+  }
+}
+
 /* -----------------------
 :: Instagram
 ----------------------- */

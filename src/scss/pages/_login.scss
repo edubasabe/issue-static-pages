@@ -1,0 +1,80 @@
+/* -----------------------
+:: Login
+----------------------- */
+.login-page {
+  &__title {
+    color: $white;
+    font-family: $playfair;
+  }
+
+  &--bg {
+    background-image: url('../images/bg-fashion-show.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 70%;
+  }
+
+  &__form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__form {
+    // border: 1px solid red;
+    background-color: $white;
+    width: 100%;
+    height: rem(430);
+  }
+
+  .container-fluid {
+    .row {
+      height: 100%;
+      min-height: 100vh;
+    }
+  }
+}
+
+.login-form {
+  &__logo {
+    max-height: rem(35);
+  }
+
+  &__title {
+    font-family: $playfair;
+  }
+
+  &__member-link {
+    font-size: rem(12);
+  }
+
+  &__forgot-password {
+    color: $golden;
+    font-size: rem(14);
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .login-form {
+    max-width: rem(420);
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .login-page {
+    &__form-section {
+      background-color: $white;
+    }
+
+    &--bg {
+      background-position: -50rem 0;
+      background-size: contain;
+    }
+  }
+
+  .login-form {
+    &__logo {
+      max-height: rem(42);
+    }
+  }
+}

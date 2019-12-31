@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+  <link href="./css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet" />
+  <title>Static Pages - Sign In</title>
+
+  <link href="https://unpkg.com/swiper/css/swiper.min.css" rel="stylesheet" />
+  <link href="./css/main.css" rel="stylesheet" />
+</head>
+
+<body class="ino-body login-page--bg">
+  <section class="login-page">
+    <div class="container-fluid">
+      <div class="row d-lg-flex">
+        <div class="col-12 col-lg-4 d-none d-lg-block p-5">
+          <h1 class="login-page__title">
+            Discover the top fashion clothes, in one place.
+          </h1>
+        </div>
+        <div class="col-12 col-lg-8 login-page__form-section">
+          <form action="#" class="login-page__form login-form p-2">
+            <div class="form-group pt-4">
+              <div class="col-12 d-flex justify-content-center mb-5">
+                <img alt="Logo" class="login-form__logo img-fluid" src="./images/main-logo.svg" />
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-12">
+                <h2 class="login-form__title">Sign In</h2>
+              </div>
+            </div>
+            <div class="form-group col-12">
+              <label class="hidden-label sr-only" for="Email">Email</label>
+              <input autocapitalize="words" class="form-control" id="Email" name="customer[email]" placeholder="Email"
+                type="email" />
+            </div>
+            <div class="form-group col-12 mb-0">
+              <label class="hidden-label sr-only" for="Email">Password</label>
+              <input autocapitalize="words" class="form-control" id="Password" name="customer[password]"
+                placeholder="Password" type="password" />
+            </div>
+            <div class="form-group">
+              <div class="col-12 text-right">
+                <a href="#" class="login-form__forgot-password">Forgot your password?</a>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-12 text-right">
+                <a href="#" class="btn btn-dark btn-block text-uppercase">Sign In</a>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-12 text-center">
+                <p class="login-form__member-link">Not a member? <a href="#" class="color-golden">Apply to get
+                    access</a></p>
+              </div>
+            </div>
+
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+  <script src="./js/swiper-instagram.js"></script>
+</body>
+
+</html>

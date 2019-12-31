@@ -3,11 +3,41 @@
 ----------------------- */
 .application-form {
   &--bg {
-    // background: url('../images/bg-application-form.jpg') no-repeat center;
+    background: url('../images/bg-application-form.jpg') no-repeat center;
   }
 
-  .form-container {}
+  &__title {
+    font-size: rem(18);
+    @include uppercase-spacing;
+  }
+
+  &__form-section-title {
+    font-size: rem(12);
+    @include uppercase-spacing;
+  }
+
+  .form-container {
+    background-color: $white;
+  }
+
+  input:not([type=checkbox]),
+  select,
+  option {
+    border-radius: 0;
+    background-color: $beige-whitest;
+    font-size: rem(14);
+    height: rem(48);
+    border-color: $beige-whitest;
+
+    &:focus {
+      background-color: $beige-whitest;
+    }
+  }
 
 
-
+  .input-group>.input-group-prepend>.input-group-text {
+    border-radius: 0;
+    background-color: $beige-whitest;
+    border-color: $beige-whitest;
+  }
 }

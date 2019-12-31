@@ -2,6 +2,9 @@
   background: url($backgroundUrl) no-repeat center;
 }
 
+@mixin color-golden {
+  color: $golden;
+}
 
 @mixin uppercase-spacing {
   letter-spacing: 0.2em;
@@ -64,3 +67,9 @@ $grid-breakpoints: (xs: 0,
 //     color: magenta;
 //   }  
 // }
+
+.color {
+  &-golden {
+    @include color-golden();
+  }
+}

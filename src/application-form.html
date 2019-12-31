@@ -17,7 +17,7 @@
 </head>
 
 <body class="ino-body application-form--bg">
-  <section class="application-form">
+  <section class="application-form my-5">
     <div class="container">
       <div class="row text-center">
         <div class="col-12">
@@ -26,51 +26,52 @@
       </div>
       <div class="row text-center">
         <div class="col-12">
-          <div class="form-container">
+          <div class="form-container p-5">
             <h2 class="application-form__title">APPLICATION FORM</h2>
-            <p>Ex deserunt veniam esse sit incididunt irure magna incididunt veniam duis excepteur sunt ipsum.</p>
+            <p class="mb-5 col-6 mx-auto">Ex deserunt veniam esse sit incididunt irure magna incididunt veniam duis
+              excepteur
+              sunt
+              ipsum.</p>
             <form action="#" class="application-form__form">
               <div class="row">
-                <div class="col-12 col-md-6 text-left">
-                  <h4>Personal Information</h4>
+                <!-- Left Fields -->
+                <div class="col-12 col-md-6 text-left mb-5 mb-md-0">
+                  <h4 class="application-form__form-section-title mb-4">Personal Information</h4>
 
                   <!-- First Name and Last Name -->
-                  <div class="row">
-                    <div class="col-6">
-                      <label for="FirstName" class="hidden-label">Name</label>
+                  <div class="form-row">
+                    <div class="form-group col-12 col-md-6">
+                      <label for="FirstName" class="hidden-label sr-only">First Name</label>
                       <input type="text" name="customer[first_name]" id="FirstName" class="form-control"
-                        placeholder="Name" autocapitalize="words">
+                        placeholder="First Name" autocapitalize="words">
                     </div>
 
-                    <div class="col-6">
-                      <label for="LastName" class="hidden-label">Last Name</label>
+                    <div class="form-group col-12 col-md-6">
+                      <label for="LastName" class="hidden-label sr-only">Last Name</label>
                       <input type="text" name="customer[first_name]" id="LastName" class="form-control"
                         placeholder="Last Name" autocapitalize="words">
                     </div>
-                  </div>
 
-                  <!-- Email -->
-                  <div class="row">
-                    <div class="col-12">
-                      <label for="Email" class="hidden-label">E-mail</label>
+
+                    <!-- Email -->
+                    <div class="form-group col-12">
+                      <label for="Email" class="hidden-label sr-only">E-mail</label>
                       <input type="text" name="customer[first_name]" id="Email" class="form-control" placeholder="Email"
                         autocapitalize="words">
                     </div>
 
-                  </div>
-                  <!-- Password -->
-                  <div class="row">
-                    <div class="col-12">
-                      <label for="Password" class="hidden-label">Password</label>
+
+                    <!-- Password -->
+                    <div class="form-group col-12">
+                      <label for="Password" class="hidden-label sr-only">Password</label>
                       <input type="password" name="customer[first_name]" id="Password" class="form-control"
                         placeholder="Password" autocapitalize="words">
                     </div>
-                  </div>
 
-                  <!-- Country and Date of Birth -->
-                  <div class="row">
-                    <div class="col-6">
-                      <label for="FirstName" class="hidden-label">Country</label>
+                    <!-- Country and Date of Birth -->
+
+                    <div class="form-group col-12 col-md-6">
+                      <label for="FirstName" class="hidden-label sr-only">Country</label>
                       <!-- <input type="text" name="customer[first_name]" id="FirstName" class="form-control"
                         placeholder="Country" autocapitalize="words"> -->
                       <select name="country" id="country" class="form-control">
@@ -78,70 +79,66 @@
                       </select>
                     </div>
 
-                    <div class="col-6">
-                      <label for="LastName" class="hidden-label">Date of Birth</label>
+                    <div class="form-group col-12 col-md-6">
+                      <label for="LastName" class="hidden-label sr-only">Date of Birth</label>
                       <input type="date" name="customer[first_name]" id="LastName" class="form-control"
                         placeholder="Last Name" autocapitalize="words">
                     </div>
-                  </div>
 
 
-                  <!-- Insgtagran and Last Name -->
-                  <div class="row">
-                    <div class="col-12">
-                      <label for="Instagram" class="hidden-label">Instagram</label>
-                      <input type="text" name="customer[first_name]" id="Instagram" class="form-control"
-                        placeholder="Instagram account" autocapitalize="words">
+
+                    <!-- Insgtagran and Last Name -->
+                    <div class="form-group col-12">
+                      <label for="Instagram" class="hidden-label sr-only">Instagram</label>
+                      <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">@</div>
+                        </div>
+                        <input type="text" name="customer[instagram]" id="Instagram" class="form-control"
+                          placeholder="Instagram account" autocapitalize="words">
+                      </div>
                     </div>
                   </div>
-
-
-
                 </div>
+
+                <!-- Right Fields -->
                 <div class="col-12 col-md-6 text-left">
-                  <h4>Application Information</h4>
+                  <h4 class="application-form__form-section-title mb-4">Application Information</h4>
 
                   <!-- Why -->
-                  <div class="row">
-                    <div class="col-12">
-                      <label for="Instagram" class="hidden-label">Why you would like to become a member?</label>
+                  <div class="form-row">
+                    <div class="form-group col-12">
+                      <label for="Instagram" class="hidden-label sr-only">Why you would like to become a member?</label>
                       <input type="text" name="customer[first_name]" id="Instagram" class="form-control"
                         placeholder="Why you would like to become a member?" autocapitalize="words">
                     </div>
-                  </div>
 
-                  <!-- Favourite brands -->
-                  <div class="row">
-                    <div class="col-12">
-                      <label for="Instagram" class="hidden-label">Name 3 of your favourite brands</label>
+                    <!-- Favourite brands -->
+                    <div class="form-group col-12">
+                      <label for="Instagram" class="hidden-label sr-only">Name 3 of your favourite brands</label>
                       <input type="text" name="customer[first_name]" id="Instagram" class="form-control"
                         placeholder="Name 3 of your favourite brands" autocapitalize="words">
                     </div>
-                  </div>
 
-                  <!-- Favourite brands -->
-                  <div class="row">
-                    <div class="col-12">
-                      <label for="Instagram" class="hidden-label">Career history</label>
+                    <!-- Favourite brands -->
+                    <div class="form-group col-12">
+                      <label for="Instagram" class="hidden-label sr-only">Career history</label>
                       <input type="text" name="customer[first_name]" id="Instagram" class="form-control"
                         placeholder="Career history" autocapitalize="words">
                     </div>
-                  </div>
 
-                  <!-- Favourite brands -->
-                  <div class="row">
-                    <div class="col-12">
-                      <label for="Instagram" class="hidden-label">What do you think you‘ll get out of IN.01
+                    <!-- Favourite brands -->
+                    <div class="form-group col-12">
+                      <label for="Instagram" class="hidden-label sr-only">What do you think you‘ll get out of IN.01
                         Community?</label>
                       <input type="text" name="customer[first_name]" id="Instagram" class="form-control"
                         placeholder="What do you think you‘ll get out of IN.01 Community?" autocapitalize="words">
                     </div>
-                  </div>
 
-                  <!-- Favourite brands -->
-                  <div class="row">
-                    <div class="col-12">
-                      <label for="Instagram" class="hidden-label">How did you hear about us?</label>
+
+                    <!-- Favourite brands -->
+                    <div class="form-group col-12">
+                      <label for="Instagram" class="hidden-label sr-only">How did you hear about us?</label>
                       <!-- <input type="text" name="customer[first_name]" id="Instagram" class="form-control"
                         placeholder="How did you hear about us?" autocapitalize="words"> -->
                       <select name="country" id="country" class="form-control">
@@ -156,6 +153,28 @@
                   </div>
 
 
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-12 mb-0">
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" id="autoSizingCheck">
+                    <label class="form-check-label" for="autoSizingCheck">
+                      I want to know about the latest collections and offers
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group col-12">
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" id="autoSizingCheck">
+                    <label class="form-check-label" for="autoSizingCheck">
+                      I have read and accept <a href="#">Privacy Policy</a> and <a href="#">Terms of use</a>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-group col-12">
+                  <input type="submit" value="{{ 'customer.register.submit' | t }}" class="btn btn--full">
                 </div>
               </div>
             </form>
