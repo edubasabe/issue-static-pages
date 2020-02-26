@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   initSwiperInstagram();
+  getInstagramFeed('issuenumberone');
 });
 
 function initSwiperInstagram() {
@@ -15,4 +16,15 @@ function initSwiperInstagram() {
   });
 
   console.log('done');
+}
+
+function getInstagramFeed(username) {
+  fetch(`https://www.instagram.com/${username}/?__a=1`)
+    .then(response => {
+      console.log(response);
+      // console.log(response.graphql.user.edge_owner_to_timeline_media.edges);
+    })
+    .catch(error => {
+      console.error(error);
+    })
 }
